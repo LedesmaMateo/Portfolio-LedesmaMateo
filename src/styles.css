@@ -6,5 +6,11 @@ html, body{
 }
 
 h6{
+    margin: 0px;
+    padding: 0px;
     color: white;
+}
+
+h5{
+    color: #bfcebf;
 }

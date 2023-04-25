@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./skills.component.css']
 })
 export class SkillsComponent implements OnInit {
-
+  lenguajes = ["HTML", "CSS", "JS", "TS", "Angular", "SpringBoot", "MySQL"]
   constructor() { }
 
   ngOnInit(): void {

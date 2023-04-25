@@ -5,16 +5,24 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { SkillsComponent } from './components/skills/skills.component';
+import { EducacionComponent } from './components/educacion/educacion.component';
+import { ProyectosComponent } from './components/proyectos/proyectos.component';
+import { ExperienciaComponent } from './components/experiencia/experiencia.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProfileComponent,
-    SkillsComponent
+    SkillsComponent,
+    EducacionComponent,
+    ProyectosComponent,
+    ExperienciaComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FontAwesomeModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
