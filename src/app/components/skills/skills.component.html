@@ -1,10 +1,28 @@
 <div class="container">
-    <h5>SKILLS</h5>
-    <div class="skills" *ngFor="let i of lenguajes">
-        <h6>{{i}}</h6>
-        <div class="star" *ngFor="let a of [1,2,3,4,5]">
-            <fa-icon [icon]="faStar" style="color: aqua;"></fa-icon>
+    <div class="icon">
+        <fa-icon [icon]="faGear" size="2xl"></fa-icon>
+        <h5>SKILLS</h5>
+    </div>
+
+    <div class="row">
+        <div class="col-12 col-sm-12 col-md-6 col-lg-6 item">
+            <h4>Front-End</h4>
+            <div class="skills-front" *ngFor="let i of lenguajesFront">
+                <h6>{{i}}</h6>
+                <div class="star" *ngFor="let a of [1,2,3,4,5]">
+                    <fa-icon [icon]="faStar" style="color: #13b4b4;"></fa-icon>
+                </div>
+            </div>
         </div>
 
+        <div class="col-12 col-sm-12 col-md-6 col-lg-6 item">
+            <h4>Back-End</h4>
+            <div class="skills-back items" *ngFor="let i of lenguajesBack">
+                <h6>{{i}}</h6>
+                <div class="star" *ngFor="let a of [1,2,3,4,5]">
+                    <fa-icon [icon]="faStar" style="color: #13b4b4;"></fa-icon>
+                </div>
+            </div>
+        </div>
     </div>
 </div>

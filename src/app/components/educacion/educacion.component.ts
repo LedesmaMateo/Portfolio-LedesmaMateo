@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import {faBook, faGreaterThan} from '@fortawesome/free-solid-svg-icons'
 @Component({
   selector: 'app-educacion',
   templateUrl: './educacion.component.html',
@@ -12,7 +12,8 @@ export class EducacionComponent implements OnInit {
     {entidad: "Universidad Siglo XXI", tipo: "Tecnicatura", titulo: "Tecnicatura en Redes y Telecomunicaciones", periodo: "En curso"}
   ]
 
-
+  faBook = faBook;
+  faGreatherThan = faGreaterThan;
   constructor() { }
 
   ngOnInit(): void {
