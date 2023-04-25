@@ -1,0 +1,15 @@
+.perfil{
+    padding-bottom: 50px;
+    border-right: 1px solid rgb(62, 68, 62);
+    border-left: 1px solid rgb(62, 68, 62);
+}
+
+.otros{
+    border-right: 1px solid rgb(62, 68, 62);
+}
+
+.superior{
+    margin-top: 25px;
+    border-bottom: 1px solid rgb(62, 68, 62);  
+    padding-bottom: 50px;
+}

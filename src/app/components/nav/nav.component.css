@@ -1,0 +1,12 @@
+.container{
+    padding: 25px;
+}
+
+.iconos{
+    display: flex;
+    justify-content: center;
+}
+
+fa-icon{
+    margin: 10px;
+}

@@ -1,6 +1,10 @@
-
 <div class="container">
+    <h5>SKILLS</h5>
     <div class="skills" *ngFor="let i of lenguajes">
         <h6>{{i}}</h6>
+        <div class="star" *ngFor="let a of [1,2,3,4,5]">
+            <fa-icon [icon]="faStar" style="color: aqua;"></fa-icon>
+        </div>
+
     </div>
 </div>

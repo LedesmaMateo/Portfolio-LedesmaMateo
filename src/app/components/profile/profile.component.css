@@ -1,5 +1,9 @@
 .container{
-    padding: 70px;
+    padding-top: 50px;
+}
+
+.imagen{
+    padding-left: 25%;
 }
 
 img{
@@ -8,6 +12,11 @@ img{
     border: 5px inset rgb(211, 246, 212);
 }
 
+img:hover{
+    width: 220px;
+    transition: 0.5s;
+}
+
 .datosPersonales{
-    margin-top: 25px;
+    margin: 40px 0px;
 }
