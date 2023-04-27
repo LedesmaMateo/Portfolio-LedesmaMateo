@@ -1,12 +1,23 @@
 .container{
     padding: 10px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid rgb(5,19,5,0.75);
+    position: fixed;
+    top: 0;
+    background-color: black;
 }
 
-.iconos{
+.enlaces{
     display: flex;
-    justify-content: center;
 }
 
-fa-icon{
-    margin: 10px;
+a{
+    padding: 5px;
+    text-decoration: none;
 }
+
+a:hover{
+    padding: 6px;
+    transition: 2ms;
+}
+
