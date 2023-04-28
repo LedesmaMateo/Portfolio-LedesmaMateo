@@ -10,3 +10,8 @@
 .inferior{
     margin-top: 25px;
 }
+
+#educacion, #experiencia{
+    margin-top: 30px;
+    padding: 20px 0px;
+}

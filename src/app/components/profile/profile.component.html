@@ -1,14 +1,14 @@
-<div class="container">
+<div class="container" *ngFor="let i of datosPersonales">
     <div class="imagen">
         <img src="https://i.pinimg.com/originals/6f/57/76/6f57760966a796644b8cfb0fbc449843.png" alt="">
     </div>
-    <div class="datosPersonales">
+    <div class="datosPersonales" *ngFor="let i of datosPersonales">
         <h3>Hola!</h3>
-        <h5>Mi nombre es {{datosPersonales.nombre}},</h5>
-        <p>y tengo {{datosPersonales.edad}}.<p>
-        <p>Vivo en {{datosPersonales.localidad}}.</p>
-        <p>Soy {{datosPersonales.ocupacion}},</p>
-        <p>tambien estudio Redes y Telecomunicaciones.</p>
+        <h5>Mi nombre es {{i.nombre + " " + i.apellido}}, </h5>
+        <p>y tengo .<p>
+        <p>Vivo en {{i.localidad}}.</p>
+        <p>Soy {{i.ocupacion}},</p>
+        <p>tambien soy {{i.ocupacion2}}.</p>
         <small>Me apasiona mucho la tecnologia y todo lo relacionado a ella.</small>
     </div>
 

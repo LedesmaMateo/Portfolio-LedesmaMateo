@@ -1,22 +1,32 @@
 import { Component, OnInit } from '@angular/core';
-import {faBook, faGreaterThan} from '@fortawesome/free-solid-svg-icons'
+import {faBook, faGreaterThan} from '@fortawesome/free-solid-svg-icons';
+import { ApiService } from 'src/app/service/api.service';
+
+interface Educacion{
+  entidad: string;
+  titulo: string;
+  tipo: string;
+  ano_comienzo: number;
+  ano_fin: string; 
+}
+
 @Component({
   selector: 'app-educacion',
   templateUrl: './educacion.component.html',
   styleUrls: ['./educacion.component.css']
 })
 export class EducacionComponent implements OnInit {
-  educacion = [
-    {entidad: "IPEM 97", tipo: "Secundatio", titulo: "Bachiller en Comunicacion", periodo: "2010-2016"},
-    {entidad: "Argentina Programa", tipo: "Curso", titulo: "Desarrollador Full Stack Jr", periodo:"2021-2022"},
-    {entidad: "Universidad Siglo XXI", tipo: "Tecnicatura", titulo: "Tecnicatura en Redes y Telecomunicaciones", periodo: "En curso"}
-  ]
+  public educacion: Educacion[] = [];
 
   faBook = faBook;
   faGreatherThan = faGreaterThan;
-  constructor() { }
+  constructor(private apiService: ApiService) { }
 
   ngOnInit(): void {
+    this.apiService.getEducacion().subscribe((data) =>{
+      this.educacion = data;
+      console.log(this.educacion)
+    })
   }
 
 }

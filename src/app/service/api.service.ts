@@ -6,11 +6,11 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ApiService {
-  url = 'localhost:8080/api'
+  url = 'http://localhost:8080/api'
   constructor(private http: HttpClient) { }
 
   getPerfil() : Observable<any>{
-    return this.http.get<any>(`${this.url}/perfil`);
+    return this.http.get<any>(`${this.url}/persona`);
   }
 
   getEducacion() : Observable<any>{
