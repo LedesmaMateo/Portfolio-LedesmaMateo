@@ -5,11 +5,12 @@
     border-bottom: 2px solid rgb(5,19,5,0.75);
     position: fixed;
     top: 0;
-    background-color: black;
+    background-color: #000;
 }
 
 .enlaces{
     display: flex;
+    justify-content: center;
 }
 
 a{

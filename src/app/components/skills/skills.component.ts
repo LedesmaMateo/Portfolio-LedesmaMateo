@@ -1,6 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { faStar } from '@fortawesome/free-solid-svg-icons'
 import { faGear } from '@fortawesome/free-solid-svg-icons'
+import { ApiService } from 'src/app/service/api.service';
+
+interface Skill{
+    id:number,
+    lenguaje: string,
+    nivel: string
+}
 
 @Component({
   selector: 'app-skills',
@@ -8,13 +15,18 @@ import { faGear } from '@fortawesome/free-solid-svg-icons'
   styleUrls: ['./skills.component.css']
 })
 export class SkillsComponent implements OnInit {
-  lenguajesFront = ["HTML", "CSS", "JS", "Bootstrap", "TS", "Angular"]
-  lenguajesBack = ["Java", "SpringBoot", "MySQL"]
+  skill: Skill[] = [];
   faStar = faStar;
   faGear = faGear;
-  constructor() { }
+
+  constructor(private apiService: ApiService) { }
 
   ngOnInit(): void {
+    this.apiService.getSkill().subscribe((data) =>{
+      this.skill = data;
+      console.log();
+      
+    })
   }
 
 }

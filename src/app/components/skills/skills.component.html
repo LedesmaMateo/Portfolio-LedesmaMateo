@@ -5,22 +5,11 @@
     </div>
 
     <div class="row">
-        <div class="col-12 col-sm-12 col-md-12 col-lg-6 item">
-            <h4>Front-End</h4>
-            <div class="skills-front" *ngFor="let i of lenguajesFront">
-                <h6>{{i}}</h6>
-                <div class="star" *ngFor="let a of [1,2,3,4,5]">
-                    <fa-icon [icon]="faStar" style="color: #13b4b4;"></fa-icon>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-12 col-sm-12 col-md-12 col-lg-6 item">
-            <h4>Back-End</h4>
-            <div class="skills-back items" *ngFor="let i of lenguajesBack">
-                <h6>{{i}}</h6>
-                <div class="star" *ngFor="let a of [1,2,3,4,5]">
-                    <fa-icon [icon]="faStar" style="color: #13b4b4;"></fa-icon>
+        <div class="col-12 col-sm-12 col-md-12 col-lg-12 item">
+            <div class="skills" *ngFor="let i of skill">
+                <h6>{{i.lenguaje}}</h6>
+                <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar bg-info" [ngStyle]="{'width': i.nivel}"></div>
                 </div>
             </div>
         </div>

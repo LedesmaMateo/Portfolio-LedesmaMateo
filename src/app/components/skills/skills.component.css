@@ -1,9 +1,9 @@
-.container{
-    padding: 25px;
-}
-
 .star{
     display: inline;
+}
+
+.skills{
+    padding: 8px;
 }
 
 .icon{
