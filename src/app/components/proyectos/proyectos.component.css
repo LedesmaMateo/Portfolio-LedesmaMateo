@@ -2,6 +2,12 @@
     padding-top: 50px;
 }
 
+.icon{
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+}
+
 h5{
-    text-align: center;
+    margin: 5px;
 }

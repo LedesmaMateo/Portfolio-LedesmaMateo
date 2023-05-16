@@ -20,7 +20,7 @@ interface datosPersonales{
 })
 export class ProfileComponent implements OnInit {
   datosPersonales: datosPersonales[] = [];
-
+  edad: number = 0;
   faGithub = faGithub;
   faLinkedin = faLinkedin;
   constructor(private apiService: ApiService) { }
@@ -28,8 +28,20 @@ export class ProfileComponent implements OnInit {
   ngOnInit(): void {
       this.apiService.getPerfil().subscribe((data) =>{
         this.datosPersonales = data;
-        console.log(this.datosPersonales)
+        this.calcularEdad(data[0].fecha_nacimiento)
       })
+    
+  }
+
+  calcularEdad(fecha:Date){
+    var hoy = new Date();
+    var cumpleanos = new Date(fecha);
+    this.edad = hoy.getFullYear() - cumpleanos.getFullYear();
+    var m = hoy.getMonth() - cumpleanos.getMonth();
+
+    if (m < 0 || (m === 0 && hoy.getDate() < cumpleanos.getDate())) {
+        this.edad--;
+    }
   }
 
 }

@@ -4,9 +4,9 @@
         <h5>EXPERIENCIA LABORAL</h5>
     </div>
 
-    <div class="item" *ngFor="let i of experiencia">
+    <div class="item experiencia" *ngFor="let i of experiencia">
         <div class="puesto"><fa-icon [icon]="faGreaterThan"></fa-icon><h6>{{i.puesto}}</h6></div>
-        <div class="periodo"><fa-icon [icon]="faGreaterThan" size="2xs"></fa-icon><p>{{i.periodoDesde}} - {{i.periodoHasta}}</p></div>
+        <div class="periodo"><fa-icon [icon]="faGreaterThan" size="2xs"></fa-icon><p>{{i.ano_inicio}} - {{i.ano_fin}}</p></div>
         <div class="descripcion"><fa-icon [icon]="faGreaterThan" size="2xs"></fa-icon><p>{{i.descripcion}}</p></div>
     </div>
 
