@@ -21,13 +21,11 @@ export class EducacionComponent implements OnInit {
 
   faBook = faBook;
   faGreatherThan = faGreaterThan;
-  constructor(private apiService: ApiService, private spinnerService: SpinnerService) { }
+  constructor(private apiService: ApiService) { }
 
   ngOnInit(): void {
-    this.spinnerService.llamarSpinner();
     this.apiService.getEducacion().subscribe((data) =>{
       this.educacion = data;
-      console.log(this.educacion)
     })
   }
 
